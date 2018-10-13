@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <ThingCategoryDef>
+        <defName>NeedsFridge</defName>
+        <label>refrigerate</label>
+        <parent>Root</parent>
+    </ThingCategoryDef>
+
+    <ThingCategoryDef>
+        <defName>NeedsIndoors</defName>
+        <label>indoors</label>
+        <parent>Root</parent>
+    </ThingCategoryDef>
+</Defs>

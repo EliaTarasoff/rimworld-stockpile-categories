@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+    <!--ThingDefs which already have some thingCategories-->
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[comps/li[@Class="CompProperties_Rottable"]]/thingCategories</xpath>
+        <value>
+            <li>NeedsFridge</li>
+        </value>
+    </Operation>
+
+    <!--ThingDefs which *do not* already have some thingCategories-->
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[comps/li[@Class="CompProperties_Rottable"] and not(thingCategories)]</xpath>
+        <value>
+            <thingCategories>
+                <li>NeedsFridge</li>
+            </thingCategories>
+        </value>
+    </Operation>
+</Patch>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+    <!--ThingDefs which already have some thingCategories-->
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[statBases/DeteriorationRate]/thingCategories</xpath>
+        <value>
+            <li>NeedsIndoors</li>
+        </value>
+    </Operation>
+
+    <!--ThingDefs which *do not* already have some thingCategories-->
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[statBases/DeteriorationRate and not(thingCategories)]</xpath>
+        <value>
+            <thingCategories>
+                <li>NeedsIndoors</li>
+            </thingCategories>
+        </value>
+    </Operation>
+</Patch>
